@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # REST API for managing project and tasks
 
 The API to manage project ans tasks in Database
@@ -70,3 +71,6 @@ Create task for project
 
 + Response 201 (application/json)
 + Response 404  
+=======
+# test-code-review
+>>>>>>> e21626f6b58cb71324ab207dccb6df391c63b6e9
