@@ -47,9 +47,9 @@ class ProjectController
     public function projectTaskPagerAction(Request $request):Response
     {
         $tasks = $this->storage->getTasksByProjectId(
-            $request->query->get('id'),
-            $request->query->get('limit'),
-            $request->query->get('offset')
+            $request->get('id'),
+            $request->get('limit'),
+            $request->get('offset')
         );
 
         return $this->json($tasks);
