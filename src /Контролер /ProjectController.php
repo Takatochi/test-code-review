@@ -44,17 +44,17 @@ class ProjectController
      *
      * @Route("/project/{id}/tasks", name="project-tasks", method="GET")
      */
-    public function projectTaskPagerAction(Request $request)
+    public function projectTaskPagerAction(Request $request):Response
     {
         $tasks = $this->storage->getTasksByProjectId(
-            $request->get('id'),
-            $request->get('limit'),
-            $request->get('offset')
+            $request->query->get('id'),
+            $request->query->get('limit'),
+            $request->query->get('offset')
         );
 
-        return new Response(json_encode($tasks));
+        return $this->json($tasks);
     }
-
+	
     /**
      * @param Request $request
      *
